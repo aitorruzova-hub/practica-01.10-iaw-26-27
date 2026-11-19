@@ -1,5 +1,5 @@
 #!/bin/bash
-set -ex
+set -exu
 
 #Habilitamos la exportación automática de variables de entorno
 set -a
