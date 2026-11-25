@@ -20,7 +20,7 @@ if [ -L /etc/nginx/sites-enabled/default ]; then
 fi
 
 # Reemplazamos las variables de entorno en el archivo de configuración del balanceador de carga
-envsubst '${IP_FRONTEND_1} ${IP_FRONTEND_2} ${LETS_ENCRYPT_DOMAIN}' < ../conf/load_balancer.conf.template > /etc/nginx/sites-available/${LETS_ENCRYPT_DOMAIN}.conf
+envsubst '${IP_FRONTEND_1} ${IP_FRONTEND_2} ${LETS_ENCRYPT_DOMAIN}' < ../conf/load-balancer.conf.template > /etc/nginx/sites-available/${LETS_ENCRYPT_DOMAIN}.conf
 
 # Habilitamos nuestro sitio (-f sobreescribe si ya existe)
 ln -sf /etc/nginx/sites-available/${LETS_ENCRYPT_DOMAIN}.conf /etc/nginx/sites-enabled/${LETS_ENCRYPT_DOMAIN}.conf
